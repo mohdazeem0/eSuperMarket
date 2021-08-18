@@ -1,0 +1,10 @@
+.productitem{
+    margin: 20px;
+    padding: 20px;
+    background-color: aliceblue;
+    width: 20rem;
+}
+.vegpic{
+    width: 45rem;
+    float: right;
+}
