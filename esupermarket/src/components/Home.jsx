@@ -1,74 +1,25 @@
 import React from "react";
-import {
-  Navbar,
-  Nav,
-  Container,
-  Button,
-  Row,
-  Col,
-  Form,
-  FormControl,
-} from "react-bootstrap";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import { ProductItem } from "./ProductItem";
+import { NaviBar } from "./NaviBar";
+import MiddlePart from "./MiddlePart";
+import { ProductList } from "./ProductList";
 import "./ProductItem.css";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { NavRoute1 } from "./Routes/NavRoute1";
+// import Products from "./Routes/Products";
+// import Gallary from "./Routes/Gallary";
+// import About from "./Routes/About";
+// import Contact from "./Routes/Contact";
+import { Cart } from "./Routes/Cart";
+import { Login } from "./Routes/Login";
 
 export const Home = () => {
   return (
     <React.Fragment>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">eSuper Market</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#">Home</Nav.Link>
-              <Nav.Link href="#">Products</Nav.Link>
-              <Nav.Link href="#">Contact us</Nav.Link>
-              <Nav.Link href="#">About us</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link>
-                Cart <ShoppingCartIcon />{" "}
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <NaviBar />
       <br />
-      <Row>
-        <Form className="d-flex">
-          <FormControl
-            type="search"
-            placeholder="Search"
-            className="mr-2"
-            aria-label="Search"
-          />
-          <Button variant="outline-success">Search</Button>
-        </Form>
-      </Row>
+      <MiddlePart />
       <br />
-      <Row>
-        <Col>
-          <h5 style={{ marginLeft: "100px", marginTop: "100px" }}>
-            Vegies that Cure Happiness
-          </h5>
-          <h1
-            style={{
-              fontFamily: "fantasy",
-              fontSize: "150px",
-              marginLeft: "100px",
-            }}
-          >
-            FRESH <span style={{ color: "#65D349" }}>VEGGIES</span>
-          </h1>
-        </Col>
-        <Col>
-          <img className="vegpic" src="./veg.png" alt="" />
-        </Col>
-      </Row>
-
-      <ProductItem />
+      <ProductList />
     </React.Fragment>
   );
 };

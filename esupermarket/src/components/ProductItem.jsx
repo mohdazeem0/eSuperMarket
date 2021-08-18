@@ -10,6 +10,7 @@ export const ProductItem = () => {
       <Row>
         <Col>
           <Button
+            variant="dark"
             onClick={() =>
               dispatch({
                 type: "REMOVE_PRODUCT",
@@ -22,6 +23,7 @@ export const ProductItem = () => {
         </Col>
         <Col>
           <Button
+            variant="dark"
             onClick={() =>
               dispatch({
                 type: "ADD_PRODUCT",

@@ -7,11 +7,12 @@ export const productReducer = (state = { product: ["Nike Shoes"] }, action) => {
     };
   }
   if (action.type === "REMOVE_PRODUCT") {
-    const newData = state.product.filter((item) => item !== action.data);
-
+    // const newData = state.product.filter((item) => item !== action.data);
+    state.product.pop();
     return {
-      ...state,
-      product: newData,
+      //   ...state,
+      //   product: newData,
+      product: [...state.product],
     };
   }
   return state;
