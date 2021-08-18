@@ -12,7 +12,6 @@ import {
 import { Login } from "./Login";
 import { Cart } from "./Cart";
 
-import { Cart } from "./Cart";
 export const NaviBar = () => {
   return (
     <div>
