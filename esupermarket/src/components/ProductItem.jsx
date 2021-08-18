@@ -9,14 +9,23 @@ export const ProductItem = () => {
     <Card className="productitem">
       <Row>
         <Col>
-          <Button>➖</Button>
+          <Button
+            onClick={() =>
+              dispatch({
+                type: "REMOVE_PRODUCT",
+                data: [],
+              })
+            }
+          >
+            ➖
+          </Button>
         </Col>
         <Col>
           <Button
             onClick={() =>
               dispatch({
                 type: "ADD_PRODUCT",
-                data: ["Oil, Soap, Salt, Mirchi"],
+                data: ["bhaji", "palak", "kotmir"],
               })
             }
           >

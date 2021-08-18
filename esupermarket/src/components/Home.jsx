@@ -2,7 +2,6 @@ import React from "react";
 import {
   Navbar,
   Nav,
-  NavDropdown,
   Container,
   Button,
   Row,
@@ -23,10 +22,10 @@ export const Home = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <Nav.Link href="#pricing">Products</Nav.Link>
-              <Nav.Link href="#pricing">Contact us</Nav.Link>
-              <Nav.Link href="#pricing">About us</Nav.Link>
+              <Nav.Link href="#">Home</Nav.Link>
+              <Nav.Link href="#">Products</Nav.Link>
+              <Nav.Link href="#">Contact us</Nav.Link>
+              <Nav.Link href="#">About us</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Link>
