@@ -24,11 +24,14 @@ export const MiddlePart = () => {
           <h1
             style={{
               fontFamily: "fantasy",
-              fontSize: "150px",
+              fontSize: "130px",
               marginLeft: "100px",
             }}
           >
-            FRESH <span style={{ color: "#65D349" }}>VEGGIES</span>
+            <span style={{ color: "#082032" }}>CUBA</span>
+            <br />
+
+            <span style={{ color: "#FF4C29" }}>STORE</span>
           </h1>
         </Col>
         <Col>
