@@ -1,6 +1,7 @@
 import Raect from "react";
 import { Card, Button, Row, Col } from "react-bootstrap";
 import { ProductItem } from "./ProductItem";
+import { ItemReducers } from "../state/reducers/ItemReducers";
 
 export const ProductList = () => {
   return (

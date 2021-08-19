@@ -4,7 +4,7 @@ import { Nav } from "react-bootstrap";
 export const Login = () => {
   return (
     <div>
-      <Nav.Link>
+      <Nav.Link to="./LoginPage">
         Login <AccountCircleIcon />
       </Nav.Link>
     </div>

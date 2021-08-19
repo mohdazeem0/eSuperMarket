@@ -15,7 +15,13 @@ import { Cart } from "./Cart";
 export const NaviBar = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar
+        // style={{ top: "0", position: "sticky" }}
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+      >
         <Container>
           <Navbar.Brand href="#home">eSuper Market</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

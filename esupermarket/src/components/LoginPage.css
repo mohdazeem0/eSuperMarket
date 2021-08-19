@@ -1,0 +1,12 @@
+
+#card1{
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    background: linear-gradient(to top right, rgba(218, 218, 218, 0.199), rgba(211, 211, 211, 0.425));
+
+    border: 3px solid rgba(145, 145, 145, 0.678);
+}
+Button{
+    background-color: aqua;
+}

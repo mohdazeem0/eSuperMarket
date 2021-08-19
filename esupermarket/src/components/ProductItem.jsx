@@ -24,7 +24,7 @@ export const ProductItem = () => {
         onClick={() =>
           dispatch({
             type: "ADD_PRODUCT",
-            data: ["bhaji", "palak", "kotmir"],
+            data: ["bhaji"],
           })
         }
       >
