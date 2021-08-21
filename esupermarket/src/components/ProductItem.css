@@ -1,8 +1,8 @@
 .productitem{
     margin: 20px;
     padding: 20px;
-    /* background-color: aliceblue;
-    width: 20rem; */
+    flex-direction: row ;
+    
 }
 .vegpic{
     width: 45rem;
