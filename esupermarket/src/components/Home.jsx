@@ -27,16 +27,16 @@ export const Home = () => {
     setAddCart(addToCart + 1);
   };
   // Remove from card Cart
-  const [removeFromCart, setRemoveCart] = useState(0);
+  // const [removeFromCart, setRemoveCart] = useState(0);
 
-  const removeUpdateCart = () => {
-    setAddCart(addToCart + 1);
-  };
+  // const removeUpdateCart = () => {
+  //   setRemoveCart(removeFromCart - 1);
+  // };
   return (
     <React.Fragment>
       <NaviBar addToCart={addToCart} />
       <br />
-      {/* <MiddlePart /> */}
+      <MiddlePart />
       <br />
       <ProductList updateCart={updateCart} />
     </React.Fragment>
