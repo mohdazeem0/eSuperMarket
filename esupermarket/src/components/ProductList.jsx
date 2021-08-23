@@ -4,9 +4,17 @@ import { ProductItem } from "./ProductItem";
 import { useSelector } from "react-redux";
 import "./ProductItem.css";
 
-export const ProductList = ({ updateCart }) => {
+export const ProductList = ({ updateCart, searchText }) => {
   const myProducts = useSelector((state) => state.productReducer.product);
   const [prod, setProd] = useState([...myProducts]);
+
+  useEffect(() => {
+    const filteredProducts = prod.filter((item) =>
+      item.title.includes(searchText)
+    );
+    // console.log("search karo==>", searchText);
+  }, [searchText]);
+
   useEffect(() => {
     setProd([...myProducts]);
   }, [myProducts]);

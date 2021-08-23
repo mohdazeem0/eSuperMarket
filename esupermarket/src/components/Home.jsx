@@ -5,8 +5,11 @@ import { ProductList } from "./ProductList";
 import "./ProductItem.css";
 import { getProducts } from "./service/products";
 import { useDispatch } from "react-redux";
+import SearchBox from "./SearchBox";
+import "./Home.css";
 
 export const Home = () => {
+  const [searchText, setSearchText] = useState("");
   const dispatch = useDispatch();
   const allProducts = async () => {
     const products = await getProducts();
@@ -33,12 +36,13 @@ export const Home = () => {
   //   setRemoveCart(removeFromCart - 1);
   // };
   return (
-    <React.Fragment>
+    <React.Fragment className="mainhome">
       <NaviBar addToCart={addToCart} />
       <br />
+      <SearchBox setSearchText={setSearchText} />
       <MiddlePart />
       <br />
-      <ProductList updateCart={updateCart} />
+      <ProductList updateCart={updateCart} searchText={searchText} />
     </React.Fragment>
   );
 };
