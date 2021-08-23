@@ -12,7 +12,7 @@ import {
 import { Login } from "./Login";
 import { Cart } from "./Cart";
 
-export const NaviBar = () => {
+export const NaviBar = ({ addToCart }) => {
   return (
     <div>
       <Navbar
@@ -33,7 +33,7 @@ export const NaviBar = () => {
               <Nav.Link href="#">About us</Nav.Link>
             </Nav>
             <Nav>
-              <Cart />
+              <Cart addToCart={addToCart} />
               <Login />
             </Nav>
           </Navbar.Collapse>

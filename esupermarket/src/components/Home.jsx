@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { NaviBar } from "./NaviBar";
 import MiddlePart from "./MiddlePart";
 import { ProductList } from "./ProductList";
@@ -20,13 +20,25 @@ export const Home = () => {
   useEffect(() => {
     allProducts();
   }, []);
+  // Adding to card Cart
+  const [addToCart, setAddCart] = useState(0);
+
+  const updateCart = () => {
+    setAddCart(addToCart + 1);
+  };
+  // Remove from card Cart
+  const [removeFromCart, setRemoveCart] = useState(0);
+
+  const removeUpdateCart = () => {
+    setAddCart(addToCart + 1);
+  };
   return (
     <React.Fragment>
-      <NaviBar />
+      <NaviBar addToCart={addToCart} />
       <br />
-      <MiddlePart />
+      {/* <MiddlePart /> */}
       <br />
-      <ProductList />
+      <ProductList updateCart={updateCart} />
     </React.Fragment>
   );
 };

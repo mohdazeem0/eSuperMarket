@@ -4,7 +4,7 @@ import { ProductItem } from "./ProductItem";
 import { useSelector } from "react-redux";
 import "./ProductItem.css";
 
-export const ProductList = () => {
+export const ProductList = ({ updateCart }) => {
   const myProducts = useSelector((state) => state.productReducer.product);
   const [prod, setProd] = useState([...myProducts]);
   useEffect(() => {
@@ -13,13 +13,12 @@ export const ProductList = () => {
   return (
     <Row>
       <br />
-      <br />
       <h1 style={{ textAlign: "center", fontSize: "60px" }}>Products</h1>
 
-      <Card className="productitem">
+      <Card className="Row1">
         {prod.map((item) => (
           <Col md={4}>
-            <ProductItem item={item} />
+            <ProductItem item={item} updateCart={updateCart} />
           </Col>
         ))}
       </Card>

@@ -1,14 +1,25 @@
-.productitem{
-    margin: 20px;
-    padding: 20px;
-    flex-direction: row ;
-    
+.Row1{
+    background-color: lightgreen;
+    height: auto;
+    padding: 25px;
+    display: contents;
+
 }
 .vegpic{
     width: 45rem;
     float: right;
 }
-.d-flex{
-    width: 50%;
-    
+.Card1{
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+    height: 500px;
+    width: 420px;
+    /* display: inline-block; */
+    justify-content: center;
+    transition: 0.2s;
+    display: inline-block;
+}
+.cardimg{
+    height: 250px;
 }
