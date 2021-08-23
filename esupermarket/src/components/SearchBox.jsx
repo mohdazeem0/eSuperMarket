@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import "./SearchBox.css";
 
-const SearchBox = () => {
-  const [searchText, setSearchText] = useState("");
+const SearchBox = ({ setSearchText }) => {
+  //   const [searchText, setSearchText] = useState("");
   // useEffect(() => {
   //   console.log("Search===>", searchText);
   // }, [searchText]);

@@ -9,10 +9,12 @@ export const ProductList = ({ updateCart, searchText }) => {
   const [prod, setProd] = useState([...myProducts]);
 
   useEffect(() => {
-    const filteredProducts = prod.filter((item) =>
-      item.title.includes(searchText)
-    );
-    // console.log("search karo==>", searchText);
+    if (searchText !== "") {
+      const filteredProducts = prod.filter((item) =>
+        item.title.includes(searchText)
+      );
+      setProd([...filteredProducts]);
+    }
   }, [searchText]);
 
   useEffect(() => {

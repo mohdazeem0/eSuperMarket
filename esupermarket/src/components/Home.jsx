@@ -10,6 +10,7 @@ import "./Home.css";
 
 export const Home = () => {
   const [searchText, setSearchText] = useState("");
+
   const dispatch = useDispatch();
   const allProducts = async () => {
     const products = await getProducts();
@@ -40,7 +41,7 @@ export const Home = () => {
       <NaviBar addToCart={addToCart} />
       <br />
       <SearchBox setSearchText={setSearchText} />
-      <MiddlePart />
+      {/* <MiddlePart /> */}
       <br />
       <ProductList updateCart={updateCart} searchText={searchText} />
     </React.Fragment>
