@@ -3,6 +3,7 @@ import { Card, Button, Row, Col } from "react-bootstrap";
 import { ProductItem } from "./ProductItem";
 import { useSelector } from "react-redux";
 import "./ProductItem.css";
+import { ProductDetails } from "./ProductDetails/ProductDetails";
 
 export const ProductList = ({ updateCart, searchText }) => {
   const myProducts = useSelector((state) => state.productReducer.product);
@@ -10,8 +11,8 @@ export const ProductList = ({ updateCart, searchText }) => {
 
   useEffect(() => {
     if (searchText !== "") {
-      const filteredProducts = prod.filter((item) =>
-        item.title.includes(searchText)
+      const filteredProducts = myProducts.filter((item) =>
+        item.title.toLowerCase().includes(searchText.toLowerCase())
       );
       setProd([...filteredProducts]);
     }
@@ -25,13 +26,14 @@ export const ProductList = ({ updateCart, searchText }) => {
       <br />
       <h1 style={{ textAlign: "center", fontSize: "60px" }}>Products</h1>
 
-      <Card className="Row1">
+      {/* <Card className="Row1">
         {prod.map((item) => (
           <Col md={4}>
             <ProductItem item={item} updateCart={updateCart} />
           </Col>
         ))}
-      </Card>
+      </Card> */}
+      <ProductDetails />
     </Row>
   );
 };
