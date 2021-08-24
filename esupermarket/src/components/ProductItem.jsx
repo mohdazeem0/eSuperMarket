@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button, Row, Col, Form, Image } from "react-bootstrap";
 import { useDispatch } from "react-redux";
+import { NavLink, Router } from "react-router-dom";
 
 export const ProductItem = ({ item, updateCart }) => {
   const dispatch = useDispatch();
@@ -48,6 +49,9 @@ export const ProductItem = ({ item, updateCart }) => {
             </Button>
           </Col>
         </Row>
+        <NavLink to="/details">
+          <Button>View</Button>
+        </NavLink>
       </Card>
     </React.Fragment>
   );

@@ -26,14 +26,13 @@ export const ProductList = ({ updateCart, searchText }) => {
       <br />
       <h1 style={{ textAlign: "center", fontSize: "60px" }}>Products</h1>
 
-      {/* <Card className="Row1">
+      <Card className="Row1">
         {prod.map((item) => (
           <Col md={4}>
             <ProductItem item={item} updateCart={updateCart} />
           </Col>
         ))}
-      </Card> */}
-      <ProductDetails />
+      </Card>
     </Row>
   );
 };

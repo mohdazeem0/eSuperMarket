@@ -9,6 +9,7 @@ import {
   Form,
   FormControl,
 } from "react-bootstrap";
+
 import { Login } from "./Login";
 import { Cart } from "./Cart";
 
@@ -30,7 +31,6 @@ export const NaviBar = ({ addToCart }) => {
               <Nav.Link href="#">Home</Nav.Link>
               <Nav.Link href="#">Products</Nav.Link>
               <Nav.Link href="#">Contact us</Nav.Link>
-              <Nav.Link href="#">About us</Nav.Link>
             </Nav>
             <Nav>
               <Cart addToCart={addToCart} />
