@@ -41,24 +41,13 @@ export const Home = () => {
   // };
   return (
     <React.Fragment className="mainhome">
-      <Router>
-        <NaviBar addToCart={addToCart} />
-        <br />
-        <SearchBox setSearchText={setSearchText} />
-        {/* <MiddlePart /> */}
-        <br />
-
-        <Switch>
-          <div>
-            <Route path="/">
-              <ProductList updateCart={updateCart} searchText={searchText} />
-            </Route>
-            <Route path="/details">
-              <ProductDetails />
-            </Route>
-          </div>
-        </Switch>
-      </Router>
+      <NaviBar addToCart={addToCart} />
+      <br />
+      <SearchBox setSearchText={setSearchText} />
+      {/* <MiddlePart /> */}
+      <br />
+      <ProductList updateCart={updateCart} searchText={searchText} />
+      <ProductDetails />
     </React.Fragment>
   );
 };

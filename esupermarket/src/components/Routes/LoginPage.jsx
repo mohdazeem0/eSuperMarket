@@ -5,7 +5,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import { userData } from "../config";
+import { userData } from "../../config";
 
 export const LoginPage = () => {
   const [username, setUsername] = useState("");
