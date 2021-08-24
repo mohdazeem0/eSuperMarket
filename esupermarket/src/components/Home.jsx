@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import SearchBox from "./SearchBox";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./Home.css";
-// import { Route } from "react-router-dom";
+
 import { ProductDetails } from "./ProductDetails/ProductDetails";
 
 export const Home = () => {
