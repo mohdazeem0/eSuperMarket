@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
 
 export const ProductDetails = () => {
@@ -17,10 +17,17 @@ export const ProductDetails = () => {
   }, [selectedId]);
   return (
     <div>
-      <Row>
-        <Col md={4}>Image</Col>
-        <Col md={8}>Description</Col>
-      </Row>
+      <Card>
+        <Row>
+          <Col md={2}>
+            <Button href="/ProductList">Back</Button>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={4}>Image</Col>
+          <Col md={8}>Description</Col>
+        </Row>
+      </Card>
     </div>
   );
 };
