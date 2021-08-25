@@ -11,7 +11,7 @@ function App() {
     <div>
       <Provider store={localStore}>
         <MainRoute />
-        <Home />
+        {/* <Home /> */}
       </Provider>
     </div>
   );
